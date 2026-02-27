@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin classes page</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <nav class="top-nav">
+      <div class="logo">MyApp</div>
+      <div class="nav-actions">
+        <a href="../login.html">Logout</a>
+      </div>
+    </nav>
+
+    <main class="page-admin-container">
+      <div class="page-admin-panel">
+        <div class="admin-header">
+          <h1>Classes management</h1>
+          <div class="admin-actions">
+            <button class="btn secondary">Filter</button>
+            <button class="btn primary" id="addClassButton">Add class</button>
+          </div>
+        </div>
+
+        <!-- USERS TABLE -->
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Class name</th>
+              <th>student number</th>
+              <th>year</th>
+              <th>Date added</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1A</td>
+              <td>12</td>
+              <td>1</td>
+              <td>2025-01-03</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2A</td>
+              <td>14</td>
+              <td>2</td>
+              <td>2024-09-15</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ADD class PANEL (HIDDEN BY DEFAULT) -->
+        <div class="side-panel" id="addClassPanel">
+          <h2>Add new class</h2>
+
+          <label>Name</label>
+          <input type="text" placeholder="Class" />
+          <input type="number" placeholder="Year" />
+
+          <div class="panel-actions">
+            <button class="btn secondary" id="closePanelBtn">Cancel</button>
+            <button class="btn primary">Create class</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
