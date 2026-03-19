@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin subjects page</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <nav class="top-nav">
+      <div class="logo">MyApp</div>
+      <div class="nav-actions">
+        <a href="../login.html">Logout</a>
+      </div>
+    </nav>
+
+    <main class="page-admin-container">
+      <div class="page-admin-panel">
+        <div class="admin-header">
+          <h1>Subject management</h1>
+          <div class="admin-actions">
+            <button class="btn secondary">Filter</button>
+            <button class="btn primary" id="addSubjectButton">
+              Add subject
+            </button>
+          </div>
+        </div>
+
+        <!-- USERS TABLE -->
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Previous Subject</th>
+              <th>year</th>
+              <th>Date added</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Science 1</td>
+              <td>-</td>
+              <td>1</td>
+              <td>2025-01-03</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Science 2</td>
+              <td>Science 1</td>
+              <td>2</td>
+              <td>2024-09-15</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ADD Subject PANEL (HIDDEN BY DEFAULT) -->
+        <div class="side-panel" id="addSubjectPanel">
+          <h2>Add new subject</h2>
+
+          <label>Name</label>
+          <input type="text" placeholder="Subject" />
+
+          <label>Previous subject</label>
+          <select id="preSubjectSelect">
+            <option value="">Select subject</option>
+            <option value="student">Student</option>
+            <option value="parent">Parent</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+          </select>
+
+          <input type="number" placeholder="Min grade" />
+          <input type="number" placeholder="Max grade" />
+          <input type="number" placeholder="Year" />
+
+          <div class="panel-actions">
+            <button class="btn secondary" id="closePanelBtn">Cancel</button>
+            <button class="btn primary">Create subject</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

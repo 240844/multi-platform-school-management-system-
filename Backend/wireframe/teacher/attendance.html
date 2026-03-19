@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parent Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/teacher.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <nav class="top-nav">
+      <div class="logo">MyApp</div>
+      <div class="nav-actions">
+        <a href="../login.html">Logout</a>
+      </div>
+    </nav>
+
+    <main class="page-teacher-container">
+      <div class="page-teacher-panel">
+        <div class="teacher-header">
+          <h1>Teacher Dashboard</h1>
+          <p class="subtitle">Manage students' grades</p>
+          <div class="parent-actions">
+            <button class="btn secondary">Filter</button>
+          </div>
+        </div>
+        <!-- USERS TABLE -->
+
+        <div class="attendance-panel">
+          <div class="grades-header">
+            <div>Student</div>
+            <div>Attendance</div>
+            <div>%</div>
+            <div></div>
+          </div>
+
+          <div class="grade-row">
+            <div class="student-name">Anna Kowalska</div>
+
+            <div class="grades-list">
+              <span class="attendance present">✔</span>
+              <span class="attendance late">L</span>
+              <span class="attendance absent">A</span>
+            </div>
+
+            <div class="average">92%</div>
+
+            <button class="icon-btn add">+</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin users page</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <nav class="top-nav">
+      <div class="logo">MyApp</div>
+      <div class="nav-actions">
+        <a href="../login.html">Logout</a>
+      </div>
+    </nav>
+
+    <main class="page-admin-container">
+      <div class="page-admin-panel">
+        <div class="admin-header">
+          <h1>User management</h1>
+          <div class="admin-actions">
+            <button class="btn secondary">Filter</button>
+            <button class="btn primary" id="addUserBtn">Add user</button>
+          </div>
+        </div>
+
+        <!-- USERS TABLE -->
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Class</th>
+              <th>Date added</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Anna Kowalska</td>
+              <td>Parent</td>
+              <td>2A</td>
+              <td>2025-01-03</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Jan Nowak</td>
+              <td>Teacher</td>
+              <td>—</td>
+              <td>2024-09-15</td>
+              <td class="actions-cell">
+                <button class="icon-btn edit">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ADD USER PANEL (HIDDEN BY DEFAULT) -->
+        <div class="side-panel" id="addUserPanel">
+          <h2>Add new user</h2>
+
+          <label>Name</label>
+          <input type="text" placeholder="Full name" />
+
+          <label>Role</label>
+          <select id="roleSelect">
+            <option value="">Select role</option>
+            <option value="student">Student</option>
+            <option value="parent">Parent</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+          </select>
+
+          <!-- ROLE-DEPENDENT FIELDS -->
+          <div class="role-fields" id="studentFields">
+            <label>Class</label>
+            <input type="text" placeholder="e.g. 2A" />
+          </div>
+
+          <div class="role-fields" id="parentFields">
+            <label>Child</label>
+            <input type="text" placeholder="Student name" />
+          </div>
+
+          <div class="role-fields" id="teacherFields">
+            <label>Subject</label>
+            <input type="text" placeholder="e.g. Math" />
+          </div>
+
+          <div class="panel-actions">
+            <button class="btn secondary" id="closePanelBtn">Cancel</button>
+            <button class="btn primary">Create user</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
