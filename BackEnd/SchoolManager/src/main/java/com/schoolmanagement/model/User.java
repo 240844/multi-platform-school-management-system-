@@ -1,6 +1,8 @@
 package com.schoolmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.schoolmanagement.model.enums.Role;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
