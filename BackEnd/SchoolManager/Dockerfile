@@ -1,5 +1,5 @@
 # ── Build stage ──────────────────────────────────────
-FROM gradle:8.6-jdk17 AS build
+FROM gradle:8.14-jdk17 AS build
 WORKDIR /app
 # Cache dependencies layer separately
 COPY ../../../school-management-gradle/school-management-gradle/build.gradle settings.gradle ./
@@ -11,5 +11,5 @@ RUN gradle bootJar --no-daemon -x test
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
-EXPOSE 8080
+EXPOSE 8090
 ENTRYPOINT ["java", "-jar", "app.jar"]
