@@ -49,7 +49,8 @@ public class User implements UserDetails {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
-
+    
+    @Builder.Default
     private boolean enabled = true;
 
     @PrePersist
